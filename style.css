@@ -1,0 +1,67 @@
+/* Import font dari Google */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('abcd.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: white;
+}
+
+/* Overlay biar teks kebaca */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* Navbar biar transparan dan elegan */
+.navbar {
+    background: transparent !important;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+/* Judul utama */
+.judul {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Deskripsi */
+h4 {
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Button lebih clean */
+.btn-primary {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #dddddd;
+    transform: translateY(-3px);
+}
+
+/* Biar konten agak turun ke tengah */
+.container {
+    margin-top: 15%;
+}
