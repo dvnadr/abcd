@@ -1,37 +1,39 @@
-/* Import font dari Google */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@300;400;500;600&display=swap');
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: url('abcd.jpg') no-repeat center center/cover;
+    font-family: 'Quicksand', sans-serif;
+    background: url('anjay.jpg') no-repeat center center/cover;
     height: 100vh;
     position: relative;
-    color: white;
+    color: #fff;
+    overflow: hidden;
 }
 
-/* Overlay biar teks kebaca */
+/* Blur + pink overlay */
 body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(255, 182, 193, 0.45); /* pink soft */
+    backdrop-filter: blur(2px);
     z-index: -1;
 }
 
-/* Navbar biar transparan dan elegan */
+/* Navbar transparan aesthetic */
 .navbar {
     background: transparent !important;
 }
 
 .navbar-brand {
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
+    color: white !important;
 }
 
-/* Judul utama */
+/* Judul */
 .judul {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
@@ -41,27 +43,84 @@ body::before {
 
 /* Deskripsi */
 h4 {
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6;
     margin-bottom: 25px;
 }
 
-/* Button lebih clean */
+/* Button soft */
 .btn-primary {
-    background-color: white;
-    color: black;
+    background: white;
+    color: #ff6f91;
     border: none;
     padding: 10px 25px;
-    font-weight: 500;
+    font-weight: 600;
+    border-radius: 30px;
     transition: 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #dddddd;
+    background: #ffe4ec;
     transform: translateY(-3px);
 }
 
-/* Biar konten agak turun ke tengah */
+/* Posisi konten biar tengah */
 .container {
     margin-top: 15%;
+}
+
+.spotify-player {
+    width: 220px; /* lebih kecil */
+    background: #121212;
+    border-radius: 16px;
+    padding: 14px;
+    color: white;
+    margin: 25px auto;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.cover {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.song-info h5 {
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.song-info p {
+    font-size: 0.75rem;
+    margin: 0;
+    color: #b3b3b3;
+}
+
+.controls {
+    margin: 10px 0;
+}
+
+#playBtn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: #1db954;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#playBtn:hover {
+    transform: scale(1.08);
+}
+
+#progress {
+    width: 100%;
+    height: 3px;
 }
